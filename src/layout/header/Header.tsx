@@ -2,13 +2,13 @@ import React from 'react';
 
 import styled from "styled-components";
 import Logo from "../../components/Logo";
-import Nav from "../../components/Nav";
+import Menu from "../../components/Menu";
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Logo></Logo>
-            <Nav></Nav>
+            <Menu></Menu>
         </StyledHeader>
     );
 };
