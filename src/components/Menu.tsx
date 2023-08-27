@@ -1,11 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = () => {
+
+
+export const Menu = (props:{menuItems:Array<string>}) => {
     return (
             <StyledMenu>
                 <ul>
-                    <li>
+                    {props.menuItems.map((item,index)=>{
+                    return <li key={index}>
+                        <a href="">{item}</a>
+                    </li>
+                    })}
+
+
+                   {/* <li>
                         <a href="">Home</a>
                     </li>
                     <li>
@@ -19,7 +28,7 @@ export const Menu = () => {
                     </li>
                     <li>
                         <a href="">Contact</a>
-                    </li>
+                    </li>*/}
                 </ul>
             </StyledMenu>
     );
@@ -29,6 +38,7 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
+    justify-content: center;
   }
 `
 export default Menu;
