@@ -2,24 +2,27 @@ import React from 'react';
 import styled from "styled-components";
 import photo from '../../../assets/images/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"}>
-                <div>
-                    <span>Hi There</span>
-                    <h2>I am Dmitriy Glezov</h2>
-                    <h1>A Web Developer.</h1>
-                </div>
-                <Photo src={photo} alt=""/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper align={"center"} justify={"space-around"}>
+                    <div>
+                        <span>Hi There</span>
+                        <h2>I am Dmitriy Glezov</h2>
+                        <h1>A Web Developer.</h1>
+                    </div>
+                    <Photo src={photo} alt=""/>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
 
     );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
 min-height: 100vh;
   background-color: #d2bdc9;
 `
