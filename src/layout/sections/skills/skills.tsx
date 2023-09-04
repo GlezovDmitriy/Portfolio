@@ -8,8 +8,8 @@ import {Container} from "../../../components/Container";
 export const Skills = () => {
     return (
         <StyledSkills>
-
-                <SectionTitle>My skills</SectionTitle>
+            <Container>
+                <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     <Skill iconId={'html'}
                            title={'html5'}
@@ -38,7 +38,7 @@ export const Skills = () => {
 
                 </FlexWrapper>
 
-
+            </Container>
 
 
         </StyledSkills>
@@ -46,7 +46,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  background-color: #c4a4a4;
-  min-height: 100vh;
+
 `
 export default Skills;
