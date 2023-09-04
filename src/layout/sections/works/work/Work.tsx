@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
 import {theme} from "../../../../styles/Theme";
+import {Button} from "../../../../components/Button";
 
 
 type WorkPropsType = {
@@ -14,6 +15,7 @@ export const Work = (props: WorkPropsType) => {
         <StyledWork>
             <ImageWrapper>
                 <Image src={props.src} alt=""/>
+                <Button>view project</Button>
             </ImageWrapper>
             <Description>
                 <Title>{props.title}</Title>
@@ -40,8 +42,13 @@ const StyledWork = styled.div`
   }
 `
 const ImageWrapper = styled.div`
-position: relative;
-  &:hover{
+  position: relative;
+
+  &:hover {
+    ${Button} {
+      opacity: 1;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -53,7 +60,19 @@ position: relative;
       backdrop-filter: blur(4px);
     }
   }
+
+  ${Button} {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   
+  &::before{
+    width: 100%;
+    height: 100%;
+  }
+}
 `
 const Image = styled.img`
   width: 100%;
