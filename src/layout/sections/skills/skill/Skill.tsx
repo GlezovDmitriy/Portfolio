@@ -29,9 +29,9 @@ const StyledSkill = styled.div`
   width: 380px;
   padding: 62px 20px 40px;
   text-align: center;
-  border-radius: 50px;
+  /*border-radius: 50px;
   border: 1px solid ${theme.colors.accent};
-  box-shadow: 4px 4px rgba(53, 76, 94, 0.32);
+  box-shadow: 4px 4px rgba(53, 76, 94, 0.32);*/
 `
 
 const SkillTitle = styled.h3`
