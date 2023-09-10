@@ -4,6 +4,7 @@ import photo from '../../../assets/images/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
@@ -54,13 +55,15 @@ position: relative;
 `
 
 const MainTitle = styled.h1`
-  font-size: 27px;
-  font-weight: 400;
+  /*font-size: 27px;
+  font-weight: 400;*/
+  ${font({ weight: 400, Fmax: 27, Fmin: 20,})}
 `
 const Name = styled.h2`
-  font-family: 'Josefin Sans', sans-serif;
+  ${font({family:"'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin: 36,})}
+  /*font-family: 'Josefin Sans', sans-serif;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 700;*/
   letter-spacing: 2.5px;
   margin: 10px 0;
   
@@ -97,4 +100,5 @@ const Photo = styled.img`
 const SmallText = styled.span`
   font-size: 14px;
   font-weight: 400;
+ 
 `
