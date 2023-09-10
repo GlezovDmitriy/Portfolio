@@ -26,12 +26,14 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 380px;
+  width: 330px;
+  flex-grow: 1;
   padding: 62px 20px 40px;
   text-align: center;
-  /*border-radius: 50px;
-  border: 1px solid ${theme.colors.accent};
-  box-shadow: 4px 4px rgba(53, 76, 94, 0.32);*/
+  
+  @media ${theme.media.mobile}{
+    padding: 62px 0 40px;
+  }
 `
 
 const SkillTitle = styled.h3`
