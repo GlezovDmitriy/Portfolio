@@ -53,6 +53,7 @@ const Name = styled.span`
   letter-spacing: 3px;
   
   
+  
 `
 const SocialList = styled.ul`
 display: flex;
